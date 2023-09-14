@@ -1,0 +1,80 @@
+.Custom-badge {
+    display: flex;
+    width: 122px;
+    height: 28px;
+    padding: 6px 0px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 6px;
+    color: #fff;
+    background: linear-gradient(142deg, #431BBC 0%, #1570EF 100%);
+}
+
+.custom-button_center .inte-carousel__previousNextArrow {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    bottom: 291px;
+    pointer-events: none;
+}
+
+.custom-button_center .inte-carousel__previousNextArrow .inte-carousel__prev,
+.custom-button_center .inte-carousel__previousNextArrow .inte-carousel__next {
+    background-color: #fff;
+    pointer-events:auto;
+}
+
+.toggle-switch {
+
+    cursor: pointer;
+    border: 0;
+    position: relative;
+    width: 254px;
+    height: 2.5rem;
+    border-radius: 2rem;
+    display: flex;
+    border: .1rem solid #e0e1e3;
+    align-items: center;
+    margin-top: var(--p-space-8);
+}
+
+.inte-toggles {
+    position: absolute;
+    background:var(--p-color-bg-primary-subdued-hover);
+    height: 100%;
+    width: 50%;
+    border: 1px solid  var(--p-color-text-primary);
+    border-radius: 20px;
+   
+}
+.inte-monthly,
+.inte-yearly{
+    display: flex;
+    width: 50%;
+    justify-content: center;
+    padding: 8px 16px 8px 16px;
+}
+
+.inte-toggles__monthly {
+    left: 0;
+}
+
+.inte-toggles__yearly {
+    right: 0;
+}
+
+.inte-toggles__monthly~.inte-monthly,
+.inte-toggles__yearly~.inte-yearly {
+    color: var(--p-color-text-primary);
+    font-weight: var(--p-font-weight-semibold);
+}
+
+.inte-monthly,
+.inte-yearly {
+    z-index: 1;
+}
+
+.slick-next:before,.slick-prev:before{
+    color: gray!important
+}
