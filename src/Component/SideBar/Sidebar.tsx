@@ -56,6 +56,16 @@ function SideBar() {
                 label: "Help",
                 icon: HomeMinor,
               },
+              {
+                url:"/category/create-category-template",
+                excludePaths:['#'],
+                label : "Category Template",
+              },
+              {
+                url:"/category/category-template-listing",
+                excludePaths:['#'],
+                label : "Category Listing",
+              }
             ]}
           />
         </Navigation>
