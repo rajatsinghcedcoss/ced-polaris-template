@@ -1,0 +1,22 @@
+.inte-custom__tag {
+  border: 1px solid silver;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+}
+.inte-custom__tagText {
+  padding-left: 12px;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 20px;
+}
+
+.inte-custom__tagValue {
+  margin-left: 12px;
+  background-color: rgba(236, 237, 238, 1);
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  color: rgba(78, 79, 82, 1);
+  padding: 1px 8px;
+}

@@ -1,0 +1,7 @@
+.inte-view__thumbnil {
+  width: calc(100% - 135px);
+}
+.inte-view__thumbnil .Polaris-Thumbnail {
+  height: 100%;
+  width: 100%;
+}

@@ -1,26 +1,22 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "@shopify/polaris/build/esm/styles.css";
+import Panel from "./components/Panel";
+import "./App.css";
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Panel />
+      {/* <AppProvider i18n={{}}>
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<ProductList />} />
+            <Route path="/editproduct" element={<EditProduct />} />
+          </Routes>
+        </BrowserRouter>
+      </AppProvider>  */}
+    </>
   );
-}
+};
 
 export default App;
