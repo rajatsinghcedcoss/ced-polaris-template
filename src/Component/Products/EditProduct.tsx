@@ -28,8 +28,10 @@ import {
   PlusMinor,
 } from "@shopify/polaris-icons";
 import "./EditProduct.css";
+import { useNavigate } from "react-router-dom";
 
 const EditProduct = () => {
+  const navigatin = useNavigate();
   const [selected, setSelected] = useState(0);
   const [tableDataRow, setTableRowData] = useState([]);
   const [choiceList, setChoiceList] = useState<string[]>(["ShopifyTitle"]);
@@ -426,7 +428,10 @@ const EditProduct = () => {
   return (
     <Page
       title="Product Title"
-      backAction={{ content: "Products", url: "#" }}
+      backAction={{
+        content: "Products",
+        onAction: () => navigatin("/product"),
+      }}
       subtitle="Link here"
       primaryAction={{ content: "Save", disabled: true }}
     >

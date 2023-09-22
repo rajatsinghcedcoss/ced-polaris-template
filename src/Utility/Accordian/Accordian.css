@@ -1,0 +1,28 @@
+.inte-polaris-accordian:last-child {
+    border-bottom: 0.1rem solid var(--inte-G40);
+}
+
+.inte-polaris-accordian__toggle .Polaris-Button {
+    border: 0;
+    outline: 0;
+    box-shadow: none;
+    border-radius: 0;
+}
+
+.inte-polaris-accordian__toggle .Polaris-Button .Polaris-Button__Text {
+    font-weight: 600;
+    color: rgb(28, 36, 51);;
+}
+
+.inte-polaris-accordian--active .Polaris-Button ,
+.inte-polaris-accordian__body{
+    background:rgb(243, 244, 245);
+} 
+
+.inte-polaris-accordian__body {
+    padding: 0px 16px 16px 16px;
+}
+
+.inte-polaris-accordian__toggle .Polaris-Button svg {
+    fill : auto
+}

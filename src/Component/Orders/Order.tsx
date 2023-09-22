@@ -3,7 +3,6 @@ import {
   ActionList,
   Badge,
   Button,
-  ButtonGroup,
   ChoiceList,
   HorizontalStack,
   Icon,
@@ -13,6 +12,7 @@ import {
   Page,
   Popover,
   Scrollable,
+  Select,
   Sheet,
   Text,
   TextField,
@@ -23,17 +23,16 @@ import {
 import {
   MobileCancelMajor,
   ViewMinor,
-  ComposeMajor,
   SearchMajor,
   MobileVerticalDotsMajor,
 } from "@shopify/polaris-icons";
+import "./Order.css";
+import { useNavigate } from "react-router-dom";
 
-import "./Products.css";
-
-const ProductList = () => {
+const OrderList = () => {
+  const navigatin = useNavigate();
   const [selected, setSelected] = useState(0);
   const [tableDataRow, setTableRowData] = useState([]);
-
   const handleTabChange = useCallback(
     (selectedTabIndex: number) => setSelected(selectedTabIndex),
     []
@@ -127,19 +126,10 @@ const ProductList = () => {
         <ActionList
           items={[
             {
-              content: "Edit Product",
-              icon: ComposeMajor,
-              onAction() {
-                alert("clicked");
-                console.log(id, "edit");
-              },
-            },
-            {
-              content: "View Product",
+              content: "View Order",
               icon: ViewMinor,
               onAction() {
-                alert("clicked");
-                console.log(id, "view");
+                navigatin("/vieworder");
               },
             },
           ]}
@@ -291,14 +281,8 @@ const ProductList = () => {
 
   return (
     <Page
-      title="Products"
+      title="Orders"
       subtitle="Here’s what’s happening in your store today."
-      primaryAction={
-        <HorizontalStack gap="4">
-          <Button>Upload</Button>
-          <Button>Sync Products</Button>
-        </HorizontalStack>
-      }
     >
       <div className="inte-product__tabs">
         <LegacyTabs tabs={tabs} selected={selected} onSelect={handleTabChange}>
@@ -312,11 +296,12 @@ const ProductList = () => {
                   autoComplete="off"
                 />
               </div>
-
-              <ButtonGroup segmented>
-                <Button>Sync Status</Button>
-                <Button>Amazon Lookup</Button>
-              </ButtonGroup>
+              <Select
+                label={undefined}
+                // options={options}
+                // onChange={handleSelectChange}
+                // value={selected}
+              />
               <Sheet
                 activator={<Button onClick={toggleSheetActive}>Filter</Button>}
                 open={sheetActive}
@@ -392,4 +377,4 @@ const ProductList = () => {
   );
 };
 
-export default ProductList;
+export default OrderList;
