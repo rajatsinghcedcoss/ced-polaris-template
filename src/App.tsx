@@ -16,9 +16,13 @@ import CreateCategoryTemplate from "./Component/Category/CreateCategoryTemplate"
 import ConfigurationTab from "./Component/Configuration/Configuration";
 import Dashboard from "./Component/Dashboard/Dashboard";
 import { useCallback, useState } from "react";
+import ViewProduct from "./Component/Products/ViewProduct";
+import EditProduct from "./Component/Products/EditProduct";
+import ViewOrder from "./Component/Orders/ViewOrder";
+import ProductList from "./Component/Products/ProductList";
+import OrderList from "./Component/Orders/Order";
 
-
-const logo= (
+const logo = (
   <svg
     width="248"
     height="38"
@@ -93,15 +97,14 @@ const logo= (
 
 const logoObj = {
   width: 124,
-  topBarSource : logo,
+  topBarSource: logo,
   contextualSaveBarSource: logo,
-  url:"#",
-}
-
+  url: "#",
+};
 
 function App() {
-
-  const [mobileNavigationActive, setMobileNavigationActive] = useState<boolean>(false);
+  const [mobileNavigationActive, setMobileNavigationActive] =
+    useState<boolean>(false);
   const [userMenuActive, setUserMenuActive] = useState<boolean>(false);
 
   const toggleMobileNavigationActive = useCallback(
@@ -117,14 +120,11 @@ function App() {
     []
   );
 
-
   const userMenuActions = [
     {
       items: [{ content: "Community forums" }],
     },
   ];
-
-
 
   const userMenuMarkup = (
     <TopBar.UserMenu
@@ -137,23 +137,24 @@ function App() {
     />
   );
 
-  const topBarMarkup = <TopBar
-    showNavigationToggle
-    userMenu={userMenuMarkup}
-    onNavigationToggle={toggleMobileNavigationActive}
-  />
+  const topBarMarkup = (
+    <TopBar
+      showNavigationToggle
+      userMenu={userMenuMarkup}
+      onNavigationToggle={toggleMobileNavigationActive}
+    />
+  );
 
   return (
     <AppProvider i18n={{}}>
       <BrowserRouter>
         <Frame
-        //  logo={logoObj} 
-         navigation={<SideBar />} 
-         topBar={topBarMarkup}
+          //  logo={logoObj}
+          navigation={<SideBar />}
+          topBar={topBarMarkup}
         >
           <Routes>
             <Route path="/pricing" element={<Pricing />} />
-
             <Route path="/onboarding">
               <Route path="onboarding1" element={<StepOne />} />
               <Route path="onboarding2" element={<Onboarding2 />} />
@@ -161,9 +162,22 @@ function App() {
               {/* <Route path="onboarding4" element={<Onboarding4 />} /> */}
             </Route>
             <Route path="/category">
-              <Route path="create-category-template" element={<CreateCategoryTemplate />} />
-              <Route path="category-template-listing" element={<CategoryTemplateListing />} />
+              <Route
+                path="create-category-template"
+                element={<CreateCategoryTemplate />}
+              />
+              <Route
+                path="category-template-listing"
+                element={<CategoryTemplateListing />}
+              />
             </Route>
+            <Route path="/product" element={<ProductList />} />
+            <Route path="/viewproduct" element={<ViewProduct />} />
+            <Route path="/editproduct" element={<EditProduct />} />
+
+            <Route path="/order" element={<OrderList />} />
+
+            <Route path="/vieworder" element={<ViewOrder />} />
             <Route path="/dashboard" element={<Dashboard />} />
             <Route path="configuration" element={<ConfigurationTab />} />
             <Route path="/faq" element={<FAQTemplate />} />

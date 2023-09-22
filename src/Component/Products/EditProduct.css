@@ -1,0 +1,48 @@
+/* edit product start */
+.inte-editProduct__tabs > div {
+  display: flex;
+  gap: 20px;
+}
+.inte-editProduct__tabs .Polaris-Box {
+  width: 30%;
+}
+.inte-editProduct__tabs .Polaris-LegacyTabs__Panel {
+  width: calc(100% - 30%);
+}
+.inte-editProduct__tabs .Polaris-Box .Polaris-LegacyTabs {
+  display: flex;
+  flex-direction: column;
+  border-radius: var(--p-border-radius-2);
+  background-color: var(--p-color-bg);
+  box-shadow: var(--p-shadow-md);
+  padding: var(--p-space-4);
+}
+.inte-editProduct__tabs .Polaris-LegacyTabs__Tab--selected {
+  background-color: #f7f6fc;
+}
+.inte-editProduct__tabs .Polaris-LegacyTabs__Title {
+  font-size: 20px;
+  font-weight: 500;
+}
+.inte-editProduct__tabs
+  .Polaris-LegacyTabs__Tab--selected
+  .Polaris-LegacyTabs__Title {
+  color: #413bbc;
+}
+
+.inte-editProduct__tabs
+  .Polaris-LegacyTabs__Tab--selected
+  .Polaris-LegacyTabs__Title::before {
+  content: unset;
+}
+.inte-editProduct__tabs
+  .Polaris-LegacyTabs__Tab:hover
+  .Polaris-LegacyTabs__Title {
+  color: #413bbc;
+}
+.inte-editProduct__tabs
+  .Polaris-LegacyTabs__Tab:hover
+  .Polaris-LegacyTabs__Title::before {
+  background-color: unset;
+}
+/* edit product end*/

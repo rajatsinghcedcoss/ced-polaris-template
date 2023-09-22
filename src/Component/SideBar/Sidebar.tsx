@@ -1,14 +1,9 @@
-
 import { Navigation } from "@shopify/polaris";
 import { HomeMinor, CashDollarFilledMajor } from "@shopify/polaris-icons";
-;
-
 function SideBar() {
   return (
-
     <Navigation location={window.location.pathname}>
       <Navigation.Section
-        title="Auth"
         items={[
           {
             url: "/onboarding/onboarding1",
@@ -25,11 +20,33 @@ function SideBar() {
             excludePaths: ["/"],
             label: "Onboarding3",
           },
-        ]}
-      />
-      <Navigation.Section
-        title="Panel"
-        items={[
+
+          {
+            url: "/dashboard",
+            label: "Dashboard",
+          },
+          {
+            url: "/category/create-category-template",
+            label: "Category Template",
+          },
+          {
+            url: "/category/category-template-listing",
+            label: "Category Listing",
+          },
+          {
+            url: "/configuration",
+            label: "Configuration",
+          },
+          {
+            url: "/product",
+            label: "Product List",
+          },
+
+          {
+            url: "/order",
+            label: "Order List",
+          },
+
           {
             url: "/pricing",
             label: "Pricing",
@@ -50,30 +67,9 @@ function SideBar() {
             label: "Help",
             icon: HomeMinor,
           },
-          {
-            url: "/dashboard",
-            label: "Dashboard",
-          },
-          {
-            url: "/category/create-category-template",
-            label: "Category Template",
-          },
-          {
-            url: "/category/category-template-listing",
-            label: "Category Listing",
-          },
-          {
-            url: "/configuration",
-            label: "Configuration",
-          },
         ]}
       />
     </Navigation>
-
-
-
-
-
   );
 }
 export default SideBar;
