@@ -1,0 +1,33 @@
+.inte-statusCard--green {
+  --col: rgb(85, 212, 161);
+}
+
+.inte-statusCard--red {
+  --col: rgb(214, 44, 32);
+}
+
+.inte-statusCard--yellow {
+  --col: rgb(254, 200, 75);
+}
+
+.inte-statusCard--black {
+  --col: rgb(28, 36, 51);
+}
+.inte-statusCard > .Polaris-Box {
+  box-shadow: -4px 0px 0px 0px var(--col) !important;
+  border: 1px solid rgb(231, 225, 246);;
+}
+
+.inte-statusCard .inte-card__header > .inte-svgIcon {
+  left: 0 !important;
+  transition: left 300ms ease-in !important;
+}
+
+.inte-statusCard:hover .inte-card__header > .inte-svgIcon {
+  left: 10px !important;
+  transition: left 300ms ease-in !important;
+}
+
+.inte-customText--color .Polaris-Text--root {
+  color: var(--col) !important;
+}
